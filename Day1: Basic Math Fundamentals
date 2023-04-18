@@ -1,3 +1,20 @@
 Number Systems:
 
-Natural Numbers:1,2,3,4,5,6.........
+1)Natural Numbers: 1,2,3,4,5,6.........
+2)Whole Numbers: 0,1,2,3,4,5,6,7.......
+3)Prime Numbers: Should have exactly two factors
+             ex: 2,3,5,7,9,11,13,17,19.........
+
+4) Composite Prime Numbers: should have more than two factors
+                      ex: 4,6,8,9,10,12,14,15,16,18,20.........
+5)Neither Prime Nor Composite: 1 is neither Prime as it doesnt satisfy the  rule "Should have exactly two factors" nor composite
+
+6) Integers (Z) : ....-3,-2,-1,0,1,2,3,4........
+
+7)Rational Numbers (P/q):  to represent fraction of numbers
+
+8)irrational numbers : decimals which are non terminating and non-recurring are Irrational Numbers.
+
+ex: square root of 2 = 1.4142135623091 it is irrarational number because it has non terminating and non repeating decimals
+
+9)pi = circumference of circle/ diameter =3.14
