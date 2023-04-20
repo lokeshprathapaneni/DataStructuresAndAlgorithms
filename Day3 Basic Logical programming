@@ -1,0 +1,149 @@
+1)Problem Description
+Given an integer A, you need to find the count of it's factors. Factor of a number is the number which divides it perfectly leaving no remainder.
+Example : 1, 2, 3, 6 are factors of 6
+Problem Constraints
+1 <= A <= 109
+
+Input Format
+First and only argument is an integer A.
+
+Output Format
+Return the count of factors of A.
+
+
+Example Input
+Input 1:
+5
+Input 2:
+10
+
+Example Output
+Output 1:
+2
+Output 2:
+4
+
+Solution:
+
+public class Solution {
+    public int solve(int A) {
+        int factors=0;
+        //below is normal code without optimization
+        // for(int i=1;i<=A;i++){
+        //     if(A%i==0){
+        //         factors++;
+        //     }
+        // }
+        //x*y=n x and y both are factors of N ..x,n/x are alos factors
+         for(int i=1;i*i<=A ;i++){
+            if(A%i==0){
+                if(!(i*i == A)){
+                factors=factors+2;  
+                }
+                else{
+                    factors++;
+                }
+            }
+        }
+
+        return factors;
+    }
+}
+
+
+2)Problem Description
+Given an Integer A. Return 1 if A is prime and return 0 if not.
+
+Problem Constraints
+1 <= A <= 1012
+
+Input Format
+The first argument is a single integer A.
+
+Output Format
+Return 1 if A is prime else return 0.
+
+Example Input
+Input 1:
+A = 5
+Input 2:
+
+A = 10
+
+
+Example Output
+Output 1:
+1
+Output 2:0
+
+Solution:
+public class Solution {
+    public int solve(Long A) {
+        if (A==1){
+            return 0;
+        }
+int factors=0;
+for(int i=1;i*i<=A;i++){
+    if(A%i==0){
+        if(i*i==A){
+            factors++;
+        }else{
+        factors =factors +2;
+        }
+    }
+    if(factors>2){
+        break;
+    }
+}
+
+return factors > 2? 0 :1;
+  }
+}
+
+3)Problem Description
+Given a number A. Return square root of the number if it is perfect square otherwise return -1.
+Problem Constraints
+1 <= A <= 108
+Input Format
+First and the only argument is an integer A.
+Output Format
+Return an integer which is the square root of A if A is perfect square otherwise return -1.
+Example Input
+
+Input 1:
+A = 4
+Input 2:
+
+A = 1001
+Example Output
+
+Output 1:
+2
+Output 2:
+
+-1
+Example Explanation
+
+Explanation 1:
+sqrt(4) = 2
+Explanation 2:
+
+1001 is not a perfect square.
+
+Solution)
+
+public class Solution {
+    public int solve(int A) {
+        int perfectSquare=-1;
+        for( int i=1;i*i<=A;i++){
+            if(i*i ==A){
+                perfectSquare=i;
+                break;
+            }
+            }
+     return perfectSquare;
+       
+    }
+}
+
+
