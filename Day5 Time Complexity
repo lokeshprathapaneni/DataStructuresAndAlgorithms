@@ -40,3 +40,28 @@ Since k is the number of times the loop runs we need to find k to get the time c
 So we can now say that the loop runs log2(n) times.
 
 
+3)# Multiple/Fractional loop algorithm
+for (i = n; i < 1; i=i/2){
+    statement # Some logic that the algorithm is performing.
+}
+
+
+A)O(log(N) base 2)
+
+4)
+# Multiple/Fractional loop algorithm
+for (i = n; i < 1; i=i*3){
+    statement # Some logic that the algorithm is performing.
+}
+
+A) O(Log(N) base3)
+5)
+# Multiple/Fractional loop algorithm
+for (i = n; i < 1; i=i/5){
+    statement # Some logic that the algorithm is performing.
+}
+
+
+A) O(Log(N) base5)
+
+
