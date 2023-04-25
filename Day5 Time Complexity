@@ -1,0 +1,42 @@
+1)What is the time complexity of the following code snippet
+
+for(int i = 1 ; i <= n ; i+=2){
+
+print(i);
+
+}
+
+A)O(N)
+
+Explanation:
+
+Since we are now incrementing “i” at a faster rate we know that we will reach the end of the loop a bit faster. 
+For example if “n” was 4, in the loop where we increment by 1 we will execute 4 times and in the loop where we increment by 2 we will execute only 2 times.
+So looking at the example our time complexity should be O(n/2) but n can be so big that even if we divide it by 2 our algorithm will still take n 
+units of time. Therefore, whenever any constant is either added/subtracted or multiplied/divided from the n we prefer to just consider it as O(n)
+
+2)for (i = 1; i < n; i=i*2){
+    statement # Some logic that the algorithm is performing.
+}
+
+A)LogN base 2
+
+Explanation: Here the loop counter “i” is being multiplied by 2 every time the loop executes until “i” exceeds the value of n. 
+Since it is being multiplied by 2 it is increasing at a much faster rate than if it was added by 2. To clearly understand this let’s calculate each value of i in the loop above.
+
+Number of loops:   i:
+1                  2
+2                  2*2 or 2^2
+3                  2^3
+4                  2^4
+.                   .
+.                   .
+.                   .
+k                  2^k
+So here when the loop runs k times i will have the value of 2^k. 
+Since the loop is running k times we know at the last loop the value of i was equal to n which cause the loop to break.
+We know that the value of i at the kth run was 2^k, so when the loop broke at i= n we can also say that 2^k = n
+Since k is the number of times the loop runs we need to find k to get the time complexity. We know that 2^k = n, now if we take log base 2 on either sides we get k = log2(n). 
+So we can now say that the loop runs log2(n) times.
+
+
