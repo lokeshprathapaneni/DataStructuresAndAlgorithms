@@ -1,0 +1,35 @@
+Big O notation is used to describe the performance or complexity of an algorithm. It represents the upper bound or worst-case scenario for the algorithm's time complexity, and is usually denoted as "O(f(n))", where "f(n)" is a mathematical function that describes the algorithm's performance.
+
+Here are some common rules of Big O notation:
+
+O(1) - constant time complexity, which means the algorithm takes the same amount of time to execute regardless of the input size.
+
+O(n) - linear time complexity, which means the algorithm's running time increases proportionally with the input size.
+
+O(n^2) - quadratic time complexity, which means the algorithm's running time increases exponentially with the input size.
+
+O(log n) - logarithmic time complexity, which means the algorithm's running time increases logarithmically with the input size.
+
+O(n log n) - logarithmic time complexity multiplied by a linear factor.
+
+O(2^n) - exponential time complexity, which means the algorithm's running time doubles with each additional input.
+
+O(n!) - factorial time complexity, which means the algorithm's running time increases dramatically with each additional input.
+
+These rules can be used to compare the efficiency of different algorithms and to choose the best algorithm for a given problem.
+
+
+Rules of Big O extraction:
+
+One of the rules of Big O notation is to ignore lower-order terms and constants. This means that when analyzing the time complexity of an algorithm, we only consider the term with the largest growth rate and ignore smaller terms or constants.
+
+For example, if an algorithm has a time complexity of O(n^2 + n + 1), we can simplify it to O(n^2) because the n^2 term grows much faster than the n and constant terms as n gets larger.
+
+Similarly, if an algorithm has a time complexity of O(3n^2 + 5n), we can simplify it to O(n^2) by ignoring the constant factor of 3 and the lower-order term of n.
+
+By ignoring lower-order terms and constants, we can simplify the Big O notation and focus on the most significant factor that determines the algorithm's performance. This allows us to compare different algorithms more easily and choose the best one for a given problem.
+
+
+
+
+
