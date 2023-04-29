@@ -1,0 +1,204 @@
+1)Problem Description
+Given an array A of size N. You need to find the sum of Maximum and Minimum element in the given array.
+
+
+Problem Constraints
+1 <= N <= 105
+-109 <= A[i] <= 109
+
+
+Input Format
+First argument A is an integer array.
+
+
+Output Format
+Return the sum of maximum and minimum element of the array
+
+
+Example Input
+Input 1:
+
+A = [-2, 1, -4, 5, 3]
+Input 2:
+
+A = [1, 3, 4, 1]
+
+
+Example Output
+Output 1:
+
+1
+Output 2:
+
+5
+
+Ans)
+
+public class Solution {
+    public int solve(ArrayList<Integer> A) {
+        int sum= getMaxOrMin(A,false)+ getMaxOrMin(A,true);
+        return sum;
+    }
+
+    private static int getMaxOrMin(ArrayList<Integer> A , boolean isMinimum){
+        
+        int compare=A.get(0),i=0;
+        if(isMinimum)
+        while(i<A.size()){
+            if(compare<A.get(i)){
+                compare = A.get(i);
+            }
+            i++;
+        }
+        else{
+             while(i<A.size()){
+            if(compare>A.get(i)){
+                compare = A.get(i);
+            }
+            i++;
+        }
+               }
+                return compare;
+
+    }
+}
+
+
+2)Problem Description
+
+Given an array A and an integer B, find the number of occurrences of B in A.
+
+
+Problem Constraints
+
+1 <= B, Ai <= 109
+1 <= |A| <= 105
+
+
+Input Format
+
+Given an integer array A and an integer B.
+
+
+Output Format
+
+Return an integer, number of occurrences of B in A.
+
+
+Example Input
+
+Input 1:
+ A = [1, 2, 2], B = 2 
+Input 2:
+ A = [1, 2, 1], B = 3 
+
+
+Example Output
+
+Output 1:
+ 2
+Output 2:
+ 0
+ 
+ Ans)
+ 
+ public class Solution {
+    public int solve(ArrayList<Integer> A, int B) {
+        return getOccurancesCount(A,B);
+
+    }
+
+    private static int getOccurancesCount(ArrayList<Integer> A, int B){
+        int i=0,count=0;
+        
+
+        while(i<A.size()){
+            if( A.get(i) == B){
+                count++;
+            }
+            i++;
+        }
+        return count;
+    }
+}
+
+
+3)Problem Description
+You are given an integer array A. You have to find the second largest element/value in the array or report that no such element exists.
+
+
+Problem Constraints
+1 <= |A| <= 105
+
+0 <= A[i] <= 109
+
+
+
+Input Format
+The first argument is an integer array A.
+
+
+
+Output Format
+Return the second largest element. If no such element exist then return -1.
+
+
+
+Example Input
+Input 1:
+
+ A = [2, 1, 2] 
+Input 2:
+
+ A = [2]
+
+
+Example Output
+Output 1:
+
+ 1 
+Output 2:
+
+ -1 
+ 
+ Ans). BELOW Solution is giving Time Limit Exceeded for hard cases while it is working in Local IDE
+ 
+ public class Solution {
+    public int solve(ArrayList<Integer> A) {
+     sort(A);
+    
+       int sizes =A.size();
+       int max=A.get(sizes-1);
+int i=sizes-2 ;
+    //    for(int i=sizes-2 ; i>=0 ;i--){
+        while(i>=0){
+           int curretElement =A.get(i);
+            if(curretElement < max){
+                return curretElement;
+            }
+            i--;
+       }
+       return -1;
+
+    }
+
+    private static ArrayList<Integer>  sort(ArrayList<Integer> arr){
+
+        for(int i=0; i<arr.size()-1 ; i++){
+            int i1 = arr.get(i);
+            int i2 = arr.get(i+1);
+            if ( i1>i2 ){
+                arr.set(i+1,i1);
+                arr.set(i,i2);
+                i=-1;
+
+
+            }
+        }
+
+
+        return arr;
+    }
+}
+
+
